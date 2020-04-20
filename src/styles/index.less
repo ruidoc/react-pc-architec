@@ -1,0 +1,155 @@
+
+body * {
+    margin: 0;
+    padding: 0;
+    font-family: 'microsoft yahei';
+}
+
+#app {
+    width: 100vw;
+    height: 100vh;
+    background: #f8f8f8;
+    .ant-layout {
+        min-height: 100vh;
+    }
+}
+
+.lay-footer {
+    font-size: 14px;
+    color: rgba(0,0,0,.45);
+    text-align: center;
+}
+
+.lay-menu {
+    .logo {
+        height: 64px;
+        background: #002140;
+        transition: all 0.3s;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        h1 {
+            color: #fff;
+            font-size: 22px;
+            font-weight: 600;
+        }
+    }
+}
+.lay-header {
+    height: 64px;
+    box-shadow: 0 1px 4px rgba(0, 21, 41, 0.08);
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    .header-title {
+        display: flex;
+        align-items: stretch;
+        
+    }
+    .trigger {
+        height: 64px;
+        padding: 0 25px;
+        cursor: pointer;
+        font-size: 20px;
+        &:hover {
+            background: rgba(0, 0, 0, 0.025);
+        }
+    }
+    .rightdv {
+        height: 64px;
+        display: flex;
+        align-items: stretch;
+        .userwrap {
+            padding: 0 10px;
+            cursor: pointer;
+            &:hover {
+                background: rgba(0, 0, 0, 0.025);
+            }
+            color: #444;
+            margin-right: 12px;
+        }
+    }
+}
+
+.page-admin {
+    padding: 24px;
+}
+
+.page-goods {
+    padding: 24px;
+    .handel {
+        margin-bottom: 16px;
+        button {
+            margin-right: 8px;
+        }
+    }
+}
+
+.page-goodadd {
+    padding: 24px;
+    .add-step {
+        margin: 10px 10%;
+    }
+    .add-form {
+        width: 87%;
+        margin: 30px auto;
+        .specific {
+            border: 1px solid #ddd;
+            padding: 10px;
+            .item-k {
+                background: #f8f8f8;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 3px 12px;
+                .close {
+                    display: none;
+                }
+                &:hover {
+                    .close {
+                        display: flex;
+                    }
+                }
+            }
+            .item-v {
+                padding: 10px 12px;
+                display: flex;
+                align-items: center;
+            }
+            .close {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 20px;
+                height: 20px;
+                border-radius: 50%;
+                background: rgba(0, 0, 0, 0.3); 
+                color: #fff;
+            }
+            .item-vr {
+                display: flex;
+                flex-wrap: wrap;
+                flex : 1;
+            }
+            .lib-v {
+                position: relative;
+                display: flex;
+                margin: 4px 0;
+                .close {
+                    position: absolute;
+                    right: -8px;
+                    top: -9px;
+                    display: none;
+                }
+                &:hover {
+                    .close {
+                        display: flex;
+                    }
+                }
+            }
+        }
+    }
+    .ql-editor {
+        min-height: 400px;
+    }
+}
