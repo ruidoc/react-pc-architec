@@ -41,29 +41,26 @@ class Goodadd extends React.Component {
     upaddInfo = (data)=> {
         this.resetState('addInfo',data)
     }
-    checksubmit = e=> {
-        e.preventDefault();
-        this.props.form.validateFieldsAndScroll((err, values) => {
-            if(err) return;
-            let { addInfo, actn }= this.state
-            if(actn===0) {
-                let assy = Object.assign({},addInfo,values)
-                this.upaddInfo(assy)
-                this.resetState('actn',actn+1)
-            } else if(actn===1) {
-                if(!addInfo.specific.length || !addInfo.shopimgs.length) {
-                    message.error('规格和商品图不能为空！')
-                    return false
-                }
-                this.resetState('actn',actn+1)
-            } else {
-                if(!addInfo.describe) {
-                    message.error('商品描述不能为空！')
-                    return false
-                }
-                this.created()
+    checksubmit = values => {
+        let { addInfo, actn } = this.state
+        console.log('Success:', values);
+        if(actn===0) {
+            let assy = Object.assign({},addInfo,values)
+            this.upaddInfo(assy)
+            this.resetState('actn',actn+1)
+        } else if(actn===1) {
+            if(!addInfo.specific.length || !addInfo.shopimgs.length) {
+                message.error('规格和商品图不能为空！')
+                return false
             }
-        });
+            this.resetState('actn',actn+1)
+        } else {
+            if(!addInfo.describe) {
+                message.error('商品描述不能为空！')
+                return false
+            }
+            this.created()
+        }
     }
     created = async ()=> {
         let resdata = await request.post('/goods',this.state.addInfo)
@@ -121,7 +118,7 @@ class Goodadd extends React.Component {
             },
         };
         const formtemp = (
-            <Form {...formItemLayout} onSubmit={this.checksubmit}>
+            <Form {...formItemLayout} onFinish={this.checksubmit}>
                 <div style={{display:actn===0?'block':'none'}}>
                     <Form.Item label="商品标题" name="title" rules={[
                         { required: true, message: '商品标题不能为空!'}
@@ -135,7 +132,7 @@ class Goodadd extends React.Component {
                             {groups.map(group => (
                                 <Option key={group._id} value={group._id}>{group.title}</Option>
                             ))}
-                        </Select>)}
+                        </Select>
                     </Form.Item>
                     <Form.Item label="商品价格" name="price" rules={[
                         { required: true, message: '请设置商品价格!'}
@@ -169,12 +166,15 @@ class Goodadd extends React.Component {
                     }} />
                 </div>
                 <Form.Item  {...tailFormItemLayout}>
-                    { actn>0 && <Button onClick={()=> this.resetState('actn',actn-1)}>
-                    上一步</Button> } &nbsp;
-                    { actn<2 &&<Button type="primary" htmlType="submit">
-                    下一步</Button> }
-                    { actn===2 &&<Button type="primary" htmlType="submit">
-                    完成</Button> }
+                    {actn > 0 &&
+                        <Button onClick={() => this.resetState('actn', actn - 1)}>上一步</Button>
+                    } &nbsp;
+                    {actn < 2 &&
+                        <Button type="primary" htmlType="submit">下一步</Button>
+                    }
+                    {actn === 2 &&
+                        <Button type="primary" htmlType="submit">完成</Button>
+                    }
                 </Form.Item>
             </Form>
         )

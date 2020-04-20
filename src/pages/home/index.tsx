@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Component } from 'react'
 import { Route } from 'react-router-dom';
 
 import Menus from '@component/Layout/Menu';
@@ -12,7 +12,7 @@ import Goodgroup from '@page/goods/group';
 import { Layout } from 'antd';
 const { Header, Footer, Sider, Content } = Layout;
 
-class Home extends React.Component {
+class Home extends Component {
     state = {
         collapsed: false
     };
@@ -23,26 +23,25 @@ class Home extends React.Component {
     };
     componentWillMount() {
         if(!localStorage.admtoken) {
-            this.props.history.push('/login')
+            // this.props.history.push('/login')
         }
         if(localStorage.adminInfo) {
-            this.props.dispatch({
-                type: 'SetUserInfo',
-                data: JSON.parse(localStorage.adminInfo)
-            })
+           
         }
         console.log('home',this.props)
     }
-    render() { return (
+    render() {
+        let { collapsed } = this.state
+        return (
         <Layout>
-            <Sider trigger={null} collapsible collapsed={this.state.collapsed} width="256" style={{
+            <Sider trigger={null} collapsible collapsed={collapsed} width="256" style={{
                 boxShadow : '2px 0 6px rgba(0, 21, 41, 0.35)'
             }}>
                 <Menus {...this.props}></Menus>
             </Sider>
             <Layout>
                 <Header style={{ background: '#fff', padding: 0 }}>
-                    <MyHeader collapsed={this.state.collapsed} toggle={this.toggle} {...this.props}></MyHeader>
+                    <MyHeader collapsed={collapsed} toggle={this.toggle} {...this.props}></MyHeader>
                 </Header>
                 <Content>
                     {/* <Route path='/user' component={User}></Route> */}
