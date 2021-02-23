@@ -1,0 +1,99 @@
+
+body * {
+    margin: 0;
+    padding: 0;
+    font-family: 'microsoft yahei';
+}
+
+#app {
+    width: 100vw;
+    height: 100vh;
+    background: #f8f8f8;
+    .sided-layout {
+        min-height: 100vh;
+    }
+}
+
+.lay-footer {
+    font-size: 14px;
+    color: rgba(0,0,0,.45);
+    text-align: center;
+}
+
+.lay-menu {
+    background: #fff;
+    height: calc(100vh - 60px);
+    position: relative;
+    .trigger-wrap {
+        position: absolute;
+        bottom: 0;
+        left: 0; right: 0;
+        border-top: 1px solid #eee;
+        padding: 8px 15px;
+        .trigger {
+            height: 40px;
+            width: 40px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            font-size: 18px;
+            &:hover {
+                background: rgba(0, 0, 0, 0.03);
+            }
+        }
+    }
+}
+
+#login {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    .inpwrap {
+        margin-bottom: 17px;
+    }
+    background: url('../assets/body.svg') 100% 100% no-repeat;
+    background-size: 100% 100%;
+    .login-trunk {
+        width: 400px;
+        margin: 10% auto;
+        .title {
+            width: 100%;
+            text-align: center;
+            font-size: 30px;
+            font-weight: normal;
+        }
+        .sub-title {
+            text-align: center;
+            color: #bbb;
+        }
+    }
+}
+
+.page-admin {
+    padding: 24px;
+}
+
+.home-container {
+    position: relative;
+    background: #fff;
+    .animation-enter {
+        // opacity: 0;
+        // transform: translateX(20px);
+    }
+    .animation-enter-active {
+        // opacity: 1;
+        // transform: translateX(0);
+        // transition: opacity 300ms, transform 300ms;
+    }
+    .animation-exit {
+        // opacity: 1;
+        // transform: scale(1);
+    }
+    .animation-exit-active {
+        // opacity: 0;
+        // transform: scale(0.9);
+        // transition: opacity 300ms, transform 300ms;
+    }
+}

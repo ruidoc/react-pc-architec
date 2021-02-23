@@ -1,0 +1,137 @@
+.page-batch-detail {
+    background: #fff;
+    table {
+        width: 888px;
+        margin: 10px auto;
+        page-break-inside: auto;
+        tbody {
+            page-break-inside: avoid;
+        }
+        td {
+            border: 1px solid #333;
+            padding: 6px 10px;
+            &.handel-td {
+                text-align: center;
+            }
+        }
+        .good-item {
+            page-break-inside: avoid;
+            page-break-after: auto;
+        }
+        .page-break {
+            display: block;
+            // overflow: hidden;
+            page-break-before: always;
+            page-break-after: always;
+        }
+        .header-col {
+            background: #FAFAFA;
+        }
+    }
+    .handle-box {
+        width: 70vw;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 20px auto;
+    }
+    .flex-center {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .flex-between {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .table-moni {
+        width: 70vw;
+        margin: 10px auto;
+        page-break-inside: auto;
+        .thead {
+            overflow: hidden;
+            margin-bottom: 30px;
+            border-bottom: 1px solid #333;
+            .th-row-wrap {
+                display: flex;
+                align-items: stretch;
+            }
+            .th-row {
+                display: flex;
+                justify-content: center;
+                align-items: stretch;
+                margin-bottom: -1px;
+                border: 1px solid #333;
+                flex: 1;
+                &.mr {
+                    margin-right: -1px;
+                }
+            }
+            .title {
+                padding: 10px 0;
+                font-weight: bold;
+                font-size: 16px;
+            }
+            .throw-ti {
+                width: 130px;
+                border-right: 1px solid #333;
+                padding: 6px 10px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background: #F7F8F7;
+            }
+            .throw-va {
+                flex: 1;
+                padding: 6px 10px;
+            }
+        }
+        .tbody {
+            overflow: hidden;
+            border-bottom: 1px solid #333;
+        }
+        .good-row {
+            display: flex;
+            justify-content: center;
+            align-items: stretch;
+            border: 1px solid #333;
+            margin-bottom: -1px;
+            margin-right: -1px;
+            page-break-inside: avoid;
+            page-break-after: auto;
+            &.tl {
+                background: #F7F8F7;
+            }
+            > div {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-right: 1px solid #333;
+                padding: 6px 10px;
+                &.ima-wrap {
+                    width: 130px;
+                }
+                &.ptit {
+                    flex: 1;
+                    display: flex;
+                    flex-direction: column;
+                }
+                &.pcor {
+                    width: 100px;
+                }
+                &.barcode {
+                    width: 200px;
+                }
+                &.handel-td {
+                    flex-direction: column;
+                    text-align: center;
+                    width: 100px;
+                }
+                &.itemrow {
+                    width: 300px;
+                }
+            }
+        }
+    }
+}

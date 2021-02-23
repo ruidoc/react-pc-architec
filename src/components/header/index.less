@@ -1,0 +1,99 @@
+.lay-header {
+    height: 60px;
+    box-shadow: 0 1px 4px rgba(0, 21, 41, 0.08);
+    background: #001529;
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    .header-left {
+        display: flex;
+        align-items: stretch;
+        .logo {
+            height: 60px;
+            width: 250px;
+            // background: #002140;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            h1 {
+                color: #fff;
+                font-size: 22px;
+                font-weight: 600;
+            }
+        }
+        .mobtabs {
+            display: none;
+            height: 100%;
+            font-size: 17px;
+            padding: 0 20px;
+            color: #fff;
+            width: 150px;
+        }
+    }
+    .header-tabs {
+        display: flex;
+        margin-left: 50px;
+        .header-tab {
+            padding: 0 18px;
+            font-size: 15px;
+            cursor: pointer;
+            color: rgba(255, 255, 255, 0.6);
+            position: relative;
+            &.active {
+                font-weight: 500;
+                font-size: 16px;
+                color: #f5f5f5;
+                &:after {
+                    position: absolute;
+                    content: '';
+                    left: 40%;
+                    right: 40%;
+                    bottom: 0;
+                    height: 4px;
+                    background: #1890ff;
+                }
+            }
+            &:hover {
+                background: #002140;
+            }
+        }
+    }
+    .header-right {
+        height: 60px;
+        display: flex;
+        align-items: stretch;
+        .process-box {
+            color: #fff;
+            margin-right: 17px;
+            .spot {
+                position: relative;
+                padding-left: 12px;
+                &::before {
+                    content: '';
+                    position: absolute;
+                    left: 0;
+                    top: 30%;
+                    width: 8px;
+                    height: 8px;
+                    background: #19be6b;
+                    border-radius: 50%;
+                }
+                &.grey {
+                    &::before {
+                        background: #999;
+                    }
+                }
+            }
+        }
+        .userwrap {
+            padding: 0 16px;
+            cursor: pointer;
+            &:hover {
+                background: #002140;
+            }
+            color: #f5f5f5;
+            margin-right: 12px;
+        }
+    }
+}
