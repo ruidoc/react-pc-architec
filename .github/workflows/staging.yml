@@ -55,4 +55,3 @@ jobs:
           ARGS: -avz --delete
           SOURCE: build/*
           TARGET: /home/react-pc/
-
