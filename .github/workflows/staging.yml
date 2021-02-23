@@ -2,11 +2,6 @@
 
 name: react-pc 测试环境构建
 
-env: 
-  REG_USERNAME: ruidocs
-  IMAGE_NAME: react-pc
-  IMAGE_TAG: latest
-
 # Controls when the action will run. 
 on:
   # Triggers the workflow on push or pull request events but only for the master branch
@@ -64,7 +59,7 @@ jobs:
 
       # deploy to private server
       - name: static deploytment
-        use: easingthemes/ssh-deploy@v2.1.5
+        uses: easingthemes/ssh-deploy@v2.1.5
         env:
           SSH_PRIVATE_KEY: ${{ secrets.SERVER_SSH_KEY }}
           REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
