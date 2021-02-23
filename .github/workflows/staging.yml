@@ -53,6 +53,6 @@ jobs:
           REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
           REMOTE_USER: root
           ARGS: -avz --delete
-          SOURCE: ./build/*
+          SOURCE: build/*
           TARGET: /home/react-pc/
-          
+
