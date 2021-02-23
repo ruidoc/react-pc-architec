@@ -88,4 +88,3 @@ React 前端项目架构和编码风格介绍。已删除业务代码，只保�
 使用 **GitHub Action** 实现 CI/CD，监听 staging 和 release 分支的 push，触发自动构建。
 
 做前端容器化，部署生产环境时将前端项目打包成 docker 镜像，实现更快速的部署。
-
