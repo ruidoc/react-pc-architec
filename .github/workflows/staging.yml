@@ -51,6 +51,7 @@ jobs:
         env:
           SSH_PRIVATE_KEY: ${{ secrets.SERVER_SSH_KEY }}
           REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
-          REMOTE_USER: "root"
-          SOURCE: "build/"
-          TARGET: "/home/react-pc"
+          REMOTE_USER: root
+          # ARGS: "-avz"
+          SOURCE: build/*
+          TARGET: /home/react-pc/
