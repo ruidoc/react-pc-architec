@@ -90,7 +90,8 @@
         "build": "node scripts/build.js",
         "test": "node scripts/test.js",
         "dev": "cross-env REACT_APP_SECRET_ENV='development' node scripts/build.js",
-        "prod": "cross-env REACT_APP_SECRET_ENV='production' node scripts/build.js"
+        "prod": "cross-env REACT_APP_SECRET_ENV='production' node scripts/build.js",
+        "upload": "rsync -avz ./* root@123.57.41.105:/home/egg-api/"
     },
     "homepage": "./",
     "eslintConfig": {
