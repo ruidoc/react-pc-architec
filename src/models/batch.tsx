@@ -18,6 +18,7 @@ export interface BatchItem {
 }
 
 export interface shippMents {
+    id: number,
     status: shippStatus,
     created_at: string,
     file_url: string,

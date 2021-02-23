@@ -46,8 +46,8 @@ const Login = observer(() => {
         <div className='login-trunk'>
             <Form onFinish={toLogin}>
                 <Form.Item>
-                    <h1 className='title'>2ccm warehouse</h1>
-                    <p className='sub-title'>2ccm平台跨境转运仓</p>
+                    <h1 className='title'>React PC Project</h1>
+                    <p className='sub-title'>前端项目结构</p>
                 </Form.Item>
                 <Form.Item
                     name='email'
@@ -96,7 +96,7 @@ const Login = observer(() => {
             position: 'fixed',
             color: '#bbb',
             bottom: 20
-        }}>develop by 2ccm team</p>
+        }}>develop by ruims</p>
     </section>
 })
 

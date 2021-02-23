@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { observer, useLocalStore } from 'mobx-react';
 import { Divider, Button, Spin, Space, Modal } from 'antd';
-import BatchsModel, { shippMents } from '@/models/batchs/index';
+import BatchsModel, { shippMents } from '@/models/batch';
 import { useParams } from 'react-router-dom';
 import { CusBarcode } from '@/components';
 import fileSave from '@/utils/expofile';

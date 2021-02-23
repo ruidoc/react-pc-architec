@@ -6,7 +6,7 @@ import baseURL from '@/utils/initEnv'
 
 const instanct = axios.create({
     baseURL,
-    timeout: 30000,
+    timeout: 3000,
     headers: {
         'Content-Type': 'application/json',
     }
