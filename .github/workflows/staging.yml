@@ -46,6 +46,7 @@ jobs:
         run: yarn run build
 
       # deploy to private server
+      # 注意 ssh 私钥重新生成，不能复用现有的
       - name: static deploytment
         uses: easingthemes/ssh-deploy@v2.1.5
         env:
