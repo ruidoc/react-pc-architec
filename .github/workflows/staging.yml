@@ -2,11 +2,6 @@
 
 name: react-pc 测试环境构建
 
-env: 
-  REG_USERNAME: ruidocs
-  IMAGE_NAME: react-pc
-  IMAGE_TAG: latest
-
 # Controls when the action will run. 
 on:
   # Triggers the workflow on push or pull request events but only for the master branch
@@ -21,7 +16,7 @@ jobs:
   # This workflow contains a single job called "build"
   build:
     # The type of runner that the job will run on
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-18.04
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
@@ -37,13 +32,13 @@ jobs:
         run: echo "::set-output name=dir::$(yarn cache dir)"
 
       - uses: actions/cache@v2
-        id: yarn-cache
+        id: yarn-cache # use this to check for `cache-hit` (`steps.yarn-cache.outputs.cache-hit != 'true'`)
         with:
           path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
           key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
           restore-keys: |
             ${{ runner.os }}-yarn-
-        
+
       - name: Install dependence
         run: yarn
 
@@ -53,4 +48,11 @@ jobs:
       # deploy to private server
       # 注意 ssh 私钥重新生成，不能复用现有的
       - name: static deploytment
-        run: pwd && ls
+        uses: easingthemes/ssh-deploy@v2.1.5
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.SERVER_SSH_KEY }}
+          REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
+          REMOTE_USER: root
+          ARGS: -avz --delete
+          SOURCE: build/*
+          TARGET: /home/react-pc/
