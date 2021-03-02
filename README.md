@@ -89,3 +89,9 @@ React 前端项目架构和编码风格介绍。已删除业务代码，只保�
 
 做前端容器化，部署生产环境时将前端项目打包成 docker 镜像，实现更快速的部署。
 
+## 部署
+
+staging 部署，只要修改代码 push 到 staging 分支即可。
+
+部署地址：http://reactpc.ruims.top/
+
