@@ -1,27 +1,23 @@
+import React from 'react'
+import { BrowserRouter, HashRouter, Switch } from 'react-router-dom'
+import { LoginPage, HomePage } from './root'
+import { ConfigProvider } from 'antd'
 
-import React from 'react';
-import {
-    BrowserRouter, HashRouter, Switch
-} from 'react-router-dom';
-import { LoginPage, HomePage, otherPage } from './root';
-import { ConfigProvider } from 'antd';
-
-import zhCN from 'antd/es/locale/zh_CN';
+import zhCN from 'antd/es/locale/zh_CN'
 
 const Router = () => {
-    return (
-        <HashRouter>
-            <ConfigProvider locale={zhCN}>
-                <div id="app">
-                    <Switch>
-                        {LoginPage}
-                        {otherPage}
-                        {HomePage}
-                    </Switch>
-                </div>
-            </ConfigProvider>
-        </HashRouter>
-    )
+  return (
+    <BrowserRouter>
+      <ConfigProvider locale={zhCN}>
+        <div id="app">
+          <Switch>
+            {LoginPage}
+            {HomePage}
+          </Switch>
+        </div>
+      </ConfigProvider>
+    </BrowserRouter>
+  )
 }
 
-export default Router;
+export default Router

@@ -20,9 +20,12 @@
     "jsx": "react",
     "experimentalDecorators": true,
     "baseUrl": ".",
+    "strictNullChecks": false,
     "paths": {
-      "@/*": ["src/*"]
-    },
+      "@/*": [
+        "src/*"
+      ]
+    }
   },
   "include": [
     "src"

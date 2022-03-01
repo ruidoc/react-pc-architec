@@ -1,5 +1,2 @@
-
-export { default as CusUpload } from './Upload';
-export { default as CusMenu } from './Menu';
-export { default as CusHeader } from './header/index';
-export { default as CusBarcode } from './qrbare/index';
+export { default as CusMenu } from "./cus-menu";
+export { default as CusHeader } from "./cus-header";

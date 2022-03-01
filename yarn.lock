@@ -7429,22 +7429,22 @@ mkdirp@^0.5.1, mkdirp@^0.5.3, mkdirp@^0.5.5, mkdirp@~0.5.1:
   dependencies:
     minimist "^1.2.5"
 
-mobx-react-lite@^2.2.0:
-  version "2.2.2"
-  resolved "https://registry.npm.taobao.org/mobx-react-lite/download/mobx-react-lite-2.2.2.tgz#87c217dc72b4e47b22493daf155daf3759f868a6"
-  integrity sha1-h8IX3HK05HsiST2vFV2vN1n4aKY=
+mobx-react-lite@^3.3.0:
+  version "3.3.0"
+  resolved "https://repo.huaweicloud.com/repository/npm/mobx-react-lite/-/mobx-react-lite-3.3.0.tgz#7174e807201943beff6f9d3701492314c9fc0db3"
+  integrity sha512-U/kMSFtV/bNVgY01FuiGWpRkaQVHozBq5CEBZltFvPt4FcV111hEWkgwqVg9GPPZSEuEdV438PEz8mk8mKpYlA==
 
-mobx-react@^6.2.2:
-  version "6.3.1"
-  resolved "https://registry.npm.taobao.org/mobx-react/download/mobx-react-6.3.1.tgz?cache=0&sync_timestamp=1611747951820&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fmobx-react%2Fdownload%2Fmobx-react-6.3.1.tgz#204f9756e42e19d91cb6598837063b7e7de87c52"
-  integrity sha1-IE+XVuQuGdkctlmINwY7fn3ofFI=
+mobx-react@^7.2.0:
+  version "7.3.0"
+  resolved "https://repo.huaweicloud.com/repository/npm/mobx-react/-/mobx-react-7.3.0.tgz#a17dedb71b75dad2337e3f95eb753179f6cfe732"
+  integrity sha512-RGEcwZokopqyJE5JPwXKB9FWMSqFM9NJVO2QPI+z6laJTJeBHqvPicjnKgY5mvihxTeXB1+72TnooqUePeGV1g==
   dependencies:
-    mobx-react-lite "^2.2.0"
+    mobx-react-lite "^3.3.0"
 
-mobx@^5.15.4:
-  version "5.15.7"
-  resolved "https://registry.npm.taobao.org/mobx/download/mobx-5.15.7.tgz#b9a5f2b6251f5d96980d13c78e9b5d8d4ce22665"
-  integrity sha1-uaXytiUfXZaYDRPHjptdjUziJmU=
+mobx@^6.3.2:
+  version "6.4.2"
+  resolved "https://repo.huaweicloud.com/repository/npm/mobx/-/mobx-6.4.2.tgz#d25cd358a46b7a8fe2d8299259bc71008a2aa5b3"
+  integrity sha512-b4xQJYiH8sb0sEbfq/Ws3N77DEJtSihUFD1moeiz2jNoJ5B+mqJutt54ouO9iEfkp7Wk4jQDsVUOh7DPEW3wEw==
 
 moment@^2.24.0, moment@^2.25.3:
   version "2.29.1"

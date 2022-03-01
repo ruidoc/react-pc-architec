@@ -1,21 +1,13 @@
-import React from "react";
-import { Route, Redirect } from "react-router-dom";
+import React from 'react'
+import { Route, Redirect } from 'react-router-dom'
 
 import Home from '@/pages/Home'
 import Login from '@/pages/Login'
 
 export const LoginPage = (
-    <Route path='/login' exact>
-        <Login/>
-    </Route>
-);
+  <Route path="/login" exact>
+    <Login />
+  </Route>
+)
 
-export const HomePage = (
-    <Route path='*' component={Home} />
-);
-
-export const otherPage = (
-    <Route path='/' exact>
-        <Redirect to='/batchs' />
-    </Route>
-);
+export const HomePage = <Route path="*" component={Home} />
