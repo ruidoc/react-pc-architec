@@ -1,6 +1,8 @@
 {
-  "name": "react-admin",
+  "name": "react-pc-architec",
   "version": "0.1.0",
+  "author": "杨成功",
+  "description": "React前端项目架构绍",
   "private": true,
   "dependencies": {
     "@ant-design/icons": "^4.2.1",
