@@ -6816,10 +6816,10 @@ jszip-utils@^0.1.0:
   resolved "https://registry.npm.taobao.org/jszip-utils/download/jszip-utils-0.1.0.tgz#8c04cdedcdb291e83f055f5b261b3a3188ceca0b"
   integrity sha1-jATN7c2ykeg/BV9bJhs6MYjOygs=
 
-jszip@^3.5.0:
-  version "3.6.0"
-  resolved "https://registry.npm.taobao.org/jszip/download/jszip-3.6.0.tgz#839b72812e3f97819cc13ac4134ffced95dd6af9"
-  integrity sha1-g5tygS4/l4GcwTrEE0/87ZXdavk=
+jszip@^3.8.0:
+  version "3.8.0"
+  resolved "https://registry.yarnpkg.com/jszip/-/jszip-3.8.0.tgz#a2ac3c33fe96a76489765168213655850254d51b"
+  integrity sha512-cnpQrXvFSLdsR9KR5/x7zdf6c3m8IhZfZzSblFEHSqBaVwD2nvJ4CuCKLyvKvwBgZm08CgfSoiTBQLm5WW9hGw==
   dependencies:
     lie "~3.3.0"
     pako "~1.0.2"
